@@ -1,8 +1,13 @@
+import { Fragment } from 'react';
 import LoginButton from './Auth/Login';
+import WeatherService from './components/Weather';
 
 function App() {
   return (
-    <LoginButton />
+    <Fragment>
+      <LoginButton />
+      <WeatherService />
+    </Fragment>
   );
 }
 
