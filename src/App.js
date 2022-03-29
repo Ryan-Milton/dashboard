@@ -1,22 +1,19 @@
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Register from "./components/Register";
-import Reset from "./components/Reset";
-import Dashboard from "./components/Dashboard";
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthenticationForm } from './components/AuthenticationForm';
 
 function App() {
   return (
-    <div className="app">
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Login />} />
-          <Route exact path="/register" element={<Register />} />
-          <Route exact path="/reset" element={<Reset />} />
-          <Route exact path="/dashboard" element={<Dashboard />} />
-        </Routes>
-      </Router>
-    </div>
+    <AuthenticationForm />
+    // <BrowserRouter>
+    //     <Routes>
+    //       <Route path="/auth" component={<AuthenticationForm />} />
+    //       <Route
+    //         path="*"
+    //         element={<Navigate to="/auth" replace />}
+    //       />
+    //     </Routes>
+    //   </BrowserRouter>
   );
 }
 
